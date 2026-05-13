@@ -278,6 +278,7 @@ h3 {
 }
 
 .work-section,
+.podcast-section,
 .about-section,
 .contact-section {
   padding: clamp(58px, 9vw, 110px) clamp(18px, 5vw, 64px);
@@ -364,6 +365,74 @@ h3 {
   font-size: 0.86rem;
 }
 
+.podcast-section {
+  border-top: 1px solid var(--line);
+  background: rgba(255, 254, 250, 0.48);
+}
+
+.podcast-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+
+.podcast-card {
+  display: flex;
+  min-height: 340px;
+  flex-direction: column;
+  padding: clamp(22px, 4vw, 36px);
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: var(--surface);
+}
+
+.podcast-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: clamp(38px, 7vw, 72px);
+  color: var(--muted);
+  font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.podcast-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 6px 10px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+}
+
+.status-completed {
+  color: var(--olive);
+}
+
+.status-listening {
+  color: var(--steel);
+}
+
+.podcast-body {
+  display: flex;
+  min-height: 190px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.podcast-card p {
+  max-width: 48ch;
+  margin-bottom: 0;
+  color: var(--soft-ink);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
 .about-section {
   background: var(--graphite);
   color: var(--paper);
@@ -423,7 +492,8 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .project-grid {
+  .project-grid,
+  .podcast-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -456,7 +526,8 @@ h3 {
   .label-core,
   .label-details,
   .section-heading,
-  .project-grid {
+  .project-grid,
+  .podcast-grid {
     grid-template-columns: 1fr;
   }
 
@@ -473,7 +544,8 @@ h3 {
     border-left: 0;
   }
 
-  .project-card {
+  .project-card,
+  .podcast-card {
     min-height: 350px;
   }
 }
