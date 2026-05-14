@@ -1,4 +1,37 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="64" height="64" rx="8" fill="#171817"/>
-  <path d="M18 21H38.5C44 21 47.5 24.2 47.5 29C47.5 33 44.8 35.6 41 36.3C45.1 37 49 39.8 49 44.6C49 49.6 45.1 52.5 39 52.5H18V45.5H38.4C40.7 45.5 42 44.5 42 42.8C42 41.1 40.7 40.1 38.4 40.1H27.8C21.8 40.1 18.2 36.6 18.2 31.1C18.2 25.5 22.1 21 28.2 21H47.5V28H29C26.7 28 25.4 29.2 25.4 31.1C25.4 33 26.7 34.2 29 34.2H40.2" stroke="#F4F2EC" stroke-width="3.8" stroke-linecap="square"/>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">SL favicon</title>
+  <defs>
+    <linearGradient id="slBlue" x1="13" y1="10" x2="54" y2="53" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1B2F63"/>
+      <stop offset="0.5" stop-color="#334E8A"/>
+      <stop offset="1" stop-color="#5E78B3"/>
+    </linearGradient>
+    <filter id="softMidnight" x="4" y="8" width="56" height="48" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="0.8"/>
+    </filter>
+  </defs>
+  <rect x="3" y="3" width="58" height="58" rx="7" fill="#F4F2EC"/>
+  <rect x="3.5" y="3.5" width="57" height="57" rx="6.5" stroke="#D8D2C5"/>
+  <text
+    x="32"
+    y="38"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Inter, Arial, Helvetica, sans-serif"
+    font-size="29"
+    font-weight="750"
+    fill="#203A73"
+    opacity="0.26"
+    filter="url(#softMidnight)"
+  >SL</text>
+  <text
+    x="32"
+    y="38"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Inter, Arial, Helvetica, sans-serif"
+    font-size="29"
+    font-weight="750"
+    fill="url(#slBlue)"
+  >SL</text>
 </svg>
