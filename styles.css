@@ -110,7 +110,7 @@ h3 {
 
 .work-section,
 .podcast-section {
-  padding: clamp(28px, 5vw, 64px) clamp(18px, 5vw, 64px);
+  padding: clamp(28px, 5vw, 64px) clamp(18px, 3.5vw, 50px);
 }
 
 .work-section {
@@ -202,20 +202,8 @@ h3 {
   overflow-wrap: anywhere;
 }
 
-.project-card--wide-title .project-title-row {
-  grid-template-columns: 58px minmax(0, 1fr);
-  gap: 14px;
-}
-
 .project-card--wide-title .project-title-row h3 {
-  font-size: clamp(1.42rem, 1.74vw, 2.05rem);
   white-space: nowrap;
-}
-
-.project-card--wide-title .project-icon {
-  width: 58px;
-  height: 58px;
-  border-radius: 14px;
 }
 
 .project-icon {
