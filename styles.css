@@ -162,6 +162,13 @@ h3 {
   padding-top: clamp(42px, 6vw, 82px);
 }
 
+.section-label {
+  margin: 0 0 18px;
+  color: var(--olive);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
