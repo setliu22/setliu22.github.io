@@ -225,6 +225,10 @@ h3 {
   box-shadow: 0 12px 26px rgba(23, 24, 23, 0.14);
 }
 
+.project-icon.project-icon--watch {
+  border-radius: 50%;
+}
+
 .project-meta {
   display: flex;
   justify-content: space-between;
