@@ -1,5 +1,37 @@
 <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
   <title id="title">Seton Liu monogram</title>
-  <rect x="7" y="7" width="82" height="82" rx="6" fill="#171817"/>
-  <path d="M26 31H55C62.18 31 67 35.08 67 41.16C67 46.28 63.68 49.31 58.88 50.5C64.16 51.34 69 54.72 69 60.84C69 67.12 64.04 71 56.12 71H26V62.24H55.12C58.16 62.24 59.92 60.96 59.92 58.72C59.92 56.48 58.16 55.2 55.12 55.2H39.28C31.76 55.2 26.72 50.88 26.72 43.72C26.72 36.72 31.76 31 39.6 31H67V39.76H40.64C37.6 39.76 35.8 41.32 35.8 43.72C35.8 46.12 37.6 47.68 40.64 47.68H56.32" stroke="#F4F2EC" stroke-width="5.2" stroke-linecap="square" stroke-linejoin="miter"/>
+  <defs>
+    <linearGradient id="slBlue" x1="20" y1="18" x2="82" y2="78" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1B2F63"/>
+      <stop offset="0.46" stop-color="#334E8A"/>
+      <stop offset="1" stop-color="#5E78B3"/>
+    </linearGradient>
+    <filter id="softMidnight" x="4" y="8" width="88" height="80" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="1.15"/>
+    </filter>
+  </defs>
+  <rect x="4" y="4" width="88" height="88" rx="7" fill="#F4F2EC"/>
+  <rect x="4.5" y="4.5" width="87" height="87" rx="6.5" stroke="#D8D2C5"/>
+  <text
+    x="48"
+    y="58"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Inter, Arial, Helvetica, sans-serif"
+    font-size="42"
+    font-weight="750"
+    fill="#203A73"
+    opacity="0.28"
+    filter="url(#softMidnight)"
+  >SL</text>
+  <text
+    x="48"
+    y="58"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Inter, Arial, Helvetica, sans-serif"
+    font-size="42"
+    font-weight="750"
+    fill="url(#slBlue)"
+  >SL</text>
 </svg>
