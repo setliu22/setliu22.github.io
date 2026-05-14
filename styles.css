@@ -60,7 +60,7 @@ img {
   z-index: 20;
   padding: 10px 14px;
   transform: translateY(-140%);
-  border: 1px solid var(--ink);
+  border: 1px solid var(--line);
   background: var(--surface);
   color: var(--ink);
   text-decoration: none;
@@ -127,18 +127,50 @@ h3 {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-left: 1px solid var(--ink);
 }
 
 .project-card,
 .podcast-card {
+  position: relative;
   display: flex;
+  overflow: visible;
   min-height: 430px;
   flex-direction: column;
   padding: clamp(20px, 3vw, 30px);
-  border-right: 1px solid var(--ink);
-  border-bottom: 1px solid var(--ink);
-  background: rgba(255, 254, 250, 0.74);
+  background:
+    linear-gradient(180deg, rgba(255, 254, 250, 0.9), rgba(255, 254, 250, 0.62)),
+    rgba(255, 254, 250, 0.74);
+}
+
+.project-card::after,
+.podcast-card::after {
+  position: absolute;
+  top: 16px;
+  right: -7px;
+  bottom: 16px;
+  width: 14px;
+  content: "";
+  background:
+    linear-gradient(var(--olive), var(--olive)) 50% 12% / 7px 38px no-repeat,
+    linear-gradient(var(--steel), var(--steel)) 50% 50% / 7px 62px no-repeat,
+    linear-gradient(var(--clay), var(--clay)) 50% 84% / 7px 34px no-repeat,
+    linear-gradient(
+      90deg,
+      transparent calc(50% - 0.5px),
+      rgba(112, 109, 101, 0.3) calc(50% - 0.5px),
+      rgba(112, 109, 101, 0.3) calc(50% + 0.5px),
+      transparent calc(50% + 0.5px)
+    );
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
+  opacity: 0.84;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.project-card:nth-child(3n)::after,
+.podcast-card:last-child::after {
+  display: none;
 }
 
 .project-card p,
@@ -203,11 +235,12 @@ h3 {
 .podcast-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-left: 1px solid var(--ink);
 }
 
 .podcast-card {
-  background: var(--surface);
+  background:
+    linear-gradient(180deg, rgba(255, 254, 250, 0.96), rgba(255, 254, 250, 0.7)),
+    var(--surface);
 }
 
 .podcast-meta {
@@ -251,6 +284,21 @@ h3 {
   .podcast-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .project-card::after,
+  .podcast-card::after {
+    display: block;
+  }
+
+  .project-card:nth-child(3n)::after {
+    display: block;
+  }
+
+  .project-card:nth-child(2n)::after,
+  .project-card:last-child::after,
+  .podcast-card:last-child::after {
+    display: none;
+  }
 }
 
 @media (max-width: 700px) {
@@ -259,9 +307,19 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .project-grid,
+  .podcast-grid {
+    gap: 18px;
+  }
+
   .project-card,
   .podcast-card {
     min-height: 350px;
+  }
+
+  .project-card::after,
+  .podcast-card::after {
+    display: none;
   }
 
   .project-title-row {
