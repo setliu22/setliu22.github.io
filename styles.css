@@ -163,22 +163,21 @@ h3 {
 .project-card::before,
 .podcast-card::before {
   position: absolute;
-  top: 0;
-  right: -12px;
-  bottom: 0;
-  width: 24px;
+  inset: 0;
   content: "";
   background:
-    radial-gradient(circle at 50% 0, var(--paper) 0 11px, transparent 12px),
-    radial-gradient(circle at 50% 100%, var(--paper) 0 11px, transparent 12px);
+    radial-gradient(circle at 0 50%, var(--paper) 0 12px, transparent 13px),
+    radial-gradient(circle at 100% 50%, var(--paper) 0 12px, transparent 13px),
+    radial-gradient(circle at 0 0, var(--paper) 0 10px, transparent 11px),
+    radial-gradient(circle at 100% 0, var(--paper) 0 10px, transparent 11px),
+    radial-gradient(circle at 0 100%, var(--paper) 0 10px, transparent 11px),
+    radial-gradient(circle at 100% 100%, var(--paper) 0 10px, transparent 11px);
   pointer-events: none;
   z-index: 2;
 }
 
 .project-card:nth-child(3n)::after,
-.podcast-card:last-child::after,
-.project-card:nth-child(3n)::before,
-.podcast-card:last-child::before {
+.podcast-card:last-child::after {
   display: none;
 }
 
@@ -290,23 +289,17 @@ h3 {
   }
 
   .project-card::after,
-  .podcast-card::after,
-  .project-card::before,
-  .podcast-card::before {
+  .podcast-card::after {
     display: block;
   }
 
-  .project-card:nth-child(3n)::after,
-  .project-card:nth-child(3n)::before {
+  .project-card:nth-child(3n)::after {
     display: block;
   }
 
   .project-card:nth-child(2n)::after,
   .project-card:last-child::after,
-  .podcast-card:last-child::after,
-  .project-card:nth-child(2n)::before,
-  .project-card:last-child::before,
-  .podcast-card:last-child::before {
+  .podcast-card:last-child::after {
     display: none;
   }
 }
@@ -328,9 +321,7 @@ h3 {
   }
 
   .project-card::after,
-  .podcast-card::after,
-  .project-card::before,
-  .podcast-card::before {
+  .podcast-card::after {
     display: none;
   }
 
