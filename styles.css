@@ -171,12 +171,12 @@ h3 {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1px solid var(--ink);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border-left: 1px solid var(--ink);
 }
 
-.project-card {
+.project-card,
+.podcast-card {
   display: flex;
   min-height: 430px;
   flex-direction: column;
@@ -186,31 +186,8 @@ h3 {
   background: rgba(255, 254, 250, 0.74);
 }
 
-.project-card::before {
-  width: 44px;
-  height: 6px;
-  margin-bottom: 34px;
-  border-radius: 99px;
-  content: "";
-}
-
-.accent-olive::before {
-  background: var(--olive);
-}
-
-.accent-steel::before {
-  background: var(--steel);
-}
-
-.accent-clay::before {
-  background: var(--clay);
-}
-
-.accent-ink::before {
-  background: var(--ink);
-}
-
-.project-card p {
+.project-card p,
+.podcast-card p {
   color: var(--soft-ink);
   font-size: 1rem;
   line-height: 1.65;
@@ -270,18 +247,11 @@ h3 {
 
 .podcast-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-top: 1px solid var(--ink);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border-left: 1px solid var(--ink);
 }
 
 .podcast-card {
-  display: flex;
-  min-height: 340px;
-  flex-direction: column;
-  padding: clamp(22px, 4vw, 36px);
-  border-right: 1px solid var(--ink);
-  border-bottom: 1px solid var(--ink);
   background: var(--surface);
 }
 
@@ -315,18 +285,10 @@ h3 {
 
 .podcast-body {
   display: flex;
-  min-height: 190px;
+  flex: 1;
   flex-direction: column;
   justify-content: space-between;
   gap: 28px;
-}
-
-.podcast-card p {
-  max-width: 48ch;
-  margin-bottom: 0;
-  color: var(--soft-ink);
-  font-size: 1rem;
-  line-height: 1.65;
 }
 
 .site-footer {
