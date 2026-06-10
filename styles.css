@@ -286,6 +286,22 @@ h3 {
   gap: 28px;
 }
 
+@media (max-width: 1279px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-card::after,
+  .project-card:nth-child(3n)::after {
+    display: block;
+  }
+
+  .project-card:nth-child(2n)::after,
+  .project-card:last-child::after {
+    display: none;
+  }
+}
+
 @media (max-width: 1040px) {
   .project-grid,
   .podcast-grid {
@@ -334,14 +350,20 @@ h3 {
     gap: 14px;
   }
 
-  .project-card--wide-title .project-title-row h3 {
-    white-space: normal;
+  .project-card--wide-title .project-title-row {
+    grid-template-columns: 1fr;
   }
 
   .project-icon {
     width: 64px;
     height: 64px;
     border-radius: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .project-card--wide-title {
+    padding-inline: 8px;
   }
 }
 
