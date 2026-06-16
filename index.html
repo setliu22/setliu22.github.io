@@ -19,9 +19,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=3" />
     <link rel="preload" href="styles.css" as="style" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#projects">Skip to projects</a>
+    <a class="skip-link action-control action-control--secondary" href="#projects">Skip to projects</a>
 
     <main id="top">
       <section class="work-section" id="projects" aria-labelledby="projects-label">
@@ -46,6 +47,13 @@
               A better workout progression tracker for planning sets, logging
               lifts, and seeing training progress over time.
             </p>
+            <button
+              class="action-control card-action"
+              type="button"
+              data-screenshot-target="betterworkouts-screenshots"
+            >
+              View screenshots <span aria-hidden="true">-></span>
+            </button>
             <ul class="tag-list" aria-label="Technologies">
               <li>Swift</li>
               <li>SwiftUI</li>
@@ -69,8 +77,16 @@
               <h3>WristCards</h3>
             </div>
             <p>
-              A compact flashcard experience designed for quick review sessions.
+              Pick a synced deck on your watch and review flashcards in quick,
+              focused sessions.
             </p>
+            <button
+              class="action-control card-action"
+              type="button"
+              data-screenshot-target="wristcards-screenshots"
+            >
+              View screenshots <span aria-hidden="true">-></span>
+            </button>
             <ul class="tag-list" aria-label="Technologies">
               <li>Swift</li>
               <li>SwiftUI</li>
@@ -97,6 +113,13 @@
               Fine-grained glyph similarity detection for spotting visual
               ambiguity in text.
             </p>
+            <button
+              class="action-control card-action"
+              type="button"
+              data-screenshot-target="homoglyph-paper"
+            >
+              Read preprint <span aria-hidden="true">-></span>
+            </button>
             <ul class="tag-list" aria-label="Technologies">
               <li>Python</li>
             </ul>
@@ -130,7 +153,7 @@
                 </p>
               </div>
               <a
-                class="text-link"
+                class="action-control"
                 href="https://podcasts.apple.com/us/podcast/behind-the-money/id1376303362"
                 aria-label="Open Behind the Money on Apple Podcasts"
               >
@@ -162,7 +185,7 @@
                 </p>
               </div>
               <a
-                class="text-link"
+                class="action-control"
                 href="https://podcasts.apple.com/us/podcast/unhedged/id1691284824"
                 aria-label="Open Unhedged on Apple Podcasts"
               >
@@ -173,6 +196,114 @@
         </div>
       </section>
     </main>
+
+    <dialog
+      class="screenshot-dialog"
+      id="betterworkouts-screenshots"
+      aria-labelledby="betterworkouts-screenshots-title"
+    >
+      <div class="screenshot-dialog__panel">
+        <div class="screenshot-dialog__header">
+          <div>
+            <p class="section-label">Watch Screens</p>
+            <h2 id="betterworkouts-screenshots-title">BetterWorkouts</h2>
+          </div>
+          <button class="action-control action-control--secondary" type="button" data-screenshot-close>
+            Close
+          </button>
+        </div>
+        <div class="screenshot-gallery" aria-label="BetterWorkouts screenshots">
+          <figure class="screenshot-frame">
+            <img
+              src="assets/screenshot-betterworkouts-start.png?v=1"
+              alt="BetterWorkouts watch start screen with Start and Reorder actions"
+              width="416"
+              height="496"
+            />
+            <figcaption>Start workout</figcaption>
+          </figure>
+          <figure class="screenshot-frame">
+            <img
+              src="assets/screenshot-betterworkouts-active.png?v=1"
+              alt="BetterWorkouts active workout screen with load controls"
+              width="416"
+              height="496"
+            />
+            <figcaption>Adjust workout load</figcaption>
+          </figure>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog
+      class="screenshot-dialog"
+      id="wristcards-screenshots"
+      aria-labelledby="wristcards-screenshots-title"
+    >
+      <div class="screenshot-dialog__panel">
+        <div class="screenshot-dialog__header">
+          <div>
+            <p class="section-label">Watch Screens</p>
+            <h2 id="wristcards-screenshots-title">WristCards</h2>
+          </div>
+          <button class="action-control action-control--secondary" type="button" data-screenshot-close>
+            Close
+          </button>
+        </div>
+        <div class="screenshot-gallery" aria-label="WristCards screenshots">
+          <figure class="screenshot-frame">
+            <img
+              src="assets/screenshot-wristcards-decks.png?v=1"
+              alt="WristCards watch deck list screen"
+              width="416"
+              height="496"
+            />
+            <figcaption>Deck selection</figcaption>
+          </figure>
+          <figure class="screenshot-frame">
+            <img
+              src="assets/screenshot-wristcards-card.png?v=1"
+              alt="WristCards watch flashcard detail screen with reveal controls"
+              width="416"
+              height="496"
+            />
+            <figcaption>Flashcard review</figcaption>
+          </figure>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog
+      class="screenshot-dialog paper-dialog"
+      id="homoglyph-paper"
+      aria-labelledby="homoglyph-paper-title"
+    >
+      <div class="screenshot-dialog__panel paper-dialog__panel">
+        <div class="screenshot-dialog__header">
+          <div>
+            <p class="section-label">Preprint</p>
+            <h2 id="homoglyph-paper-title">Homoglyph Detection</h2>
+          </div>
+          <button class="action-control action-control--secondary" type="button" data-screenshot-close>
+            Close
+          </button>
+        </div>
+        <div class="paper-viewer">
+          <iframe
+            src="assets/homoglyph-detection-preprint.pdf#view=FitH"
+            title="Homoglyph Detection preprint"
+          ></iframe>
+        </div>
+        <a
+          class="action-control paper-dialog__link"
+          href="assets/homoglyph-detection-preprint.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          Open PDF in new tab <span aria-hidden="true">-></span>
+        </a>
+      </div>
+    </dialog>
 
   </body>
 </html>
