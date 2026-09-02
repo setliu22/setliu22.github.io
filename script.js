@@ -8,6 +8,40 @@ const screenshotTriggers = document.querySelectorAll("[data-screenshot-target]")
 const screenshotDialogs = document.querySelectorAll(".screenshot-dialog");
 const screenshotCloseButtons = document.querySelectorAll("[data-screenshot-close]");
 
+const loadPaperPages = (dialog) => {
+  const container = dialog?.querySelector(".paper-pages");
+
+  if (!container || container.dataset.loaded === "true") {
+    return;
+  }
+
+  const pageCount = Number.parseInt(container.dataset.pageCount || "0", 10);
+  const paperPath = container.dataset.paperPath;
+  const paperTitle = container.dataset.paperTitle || "Preprint";
+
+  if (!paperPath || pageCount < 1) {
+    return;
+  }
+
+  const fragment = document.createDocumentFragment();
+
+  for (let pageNumber = 1; pageNumber <= pageCount; pageNumber += 1) {
+    const image = document.createElement("img");
+    const paddedPageNumber = String(pageNumber).padStart(2, "0");
+
+    image.src = `${paperPath}/page-${paddedPageNumber}.jpg`;
+    image.alt = `${paperTitle}, page ${pageNumber}`;
+    image.width = 1400;
+    image.height = 1980;
+    image.decoding = "async";
+    image.loading = pageNumber === 1 ? "eager" : "lazy";
+    fragment.appendChild(image);
+  }
+
+  container.appendChild(fragment);
+  container.dataset.loaded = "true";
+};
+
 const closeScreenshotDialog = (dialog) => {
   if (!dialog) {
     return;
@@ -29,6 +63,8 @@ screenshotTriggers.forEach((trigger) => {
     if (!dialog) {
       return;
     }
+
+    loadPaperPages(dialog);
 
     if (typeof dialog.showModal === "function") {
       dialog.showModal();
