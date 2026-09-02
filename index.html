@@ -35,7 +35,7 @@
             </div>
             <div class="project-title-row">
               <img
-                class="project-icon"
+                class="project-icon project-icon--stock-agent"
                 src="assets/project-stock-agent.png?v=1"
                 alt="Stock Agent app icon"
                 width="72"
@@ -44,20 +44,19 @@
               <h3>Stock Agent</h3>
             </div>
             <p>
-              A local-first research and portfolio companion for human-approved
-              LSEG research, deterministic stock screening, risk review, and
-              macro context.
+              AI-native companion for stock research.
             </p>
-            <button
+            <a
               class="action-control card-action"
-              type="button"
-              data-screenshot-target="stock-agent-screenshots"
+              href="https://github.com/setliu22/stock-agent"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open Stock Agent repository on GitHub"
             >
-              View screenshots <span aria-hidden="true">-></span>
-            </button>
+              View on GitHub <span aria-hidden="true">-></span>
+            </a>
             <ul class="tag-list" aria-label="Technologies">
               <li>Python</li>
-              <li>LSEG</li>
               <li>SQLite</li>
             </ul>
           </article>
@@ -88,36 +87,13 @@
             >
               Read preprint <span aria-hidden="true">-></span>
             </button>
-            <ul class="tag-list" aria-label="Technologies">
-              <li>Python</li>
-            </ul>
-          </article>
-
-          <article class="project-card accent-olive">
-            <div class="project-meta">
-              <span>Projects-03</span>
-              <span>Research</span>
-            </div>
-            <div class="project-title-row">
-              <img
-                class="project-icon"
-                src="assets/project-homoglyph.png?v=2"
-                alt="Embedding Models for Fine-Grained Visual Homoglyph Detection app icon"
-                width="72"
-                height="72"
-              />
-              <h3>Embedding Models for Fine-Grained Visual Homoglyph Detection</h3>
-            </div>
-            <p>
-              Comparing visual embedding architectures for detecting lookalike
-              characters and measuring fine-grained glyph similarity.
-            </p>
             <button
               class="action-control card-action"
               type="button"
               data-screenshot-target="embedding-models-paper"
             >
-              Read preprint <span aria-hidden="true">-></span>
+              Read “Embedding Models for Fine-Grained Visual Homoglyph Detection”
+              <span aria-hidden="true">-></span>
             </button>
             <ul class="tag-list" aria-label="Technologies">
               <li>Python</li>
@@ -195,35 +171,6 @@
         </div>
       </section>
     </main>
-
-    <dialog
-      class="screenshot-dialog"
-      id="stock-agent-screenshots"
-      aria-labelledby="stock-agent-screenshots-title"
-    >
-      <div class="screenshot-dialog__panel">
-        <div class="screenshot-dialog__header">
-          <div>
-            <p class="section-label">App Screens</p>
-            <h2 id="stock-agent-screenshots-title">Stock Agent</h2>
-          </div>
-          <button class="action-control action-control--secondary" type="button" data-screenshot-close>
-            Close
-          </button>
-        </div>
-        <div class="screenshot-gallery" aria-label="Stock Agent screenshots">
-          <figure class="screenshot-frame">
-            <img
-              src="assets/screenshot-stock-agent-research.png?v=1"
-              alt="Stock Agent Research Lab window with research quick starts and question form"
-              width="2294"
-              height="1490"
-            />
-            <figcaption>Research Lab</figcaption>
-          </figure>
-        </div>
-      </div>
-    </dialog>
 
     <dialog
       class="screenshot-dialog paper-dialog"

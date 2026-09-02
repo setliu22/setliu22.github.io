@@ -204,6 +204,10 @@ h3 {
   box-shadow: 0 12px 26px rgba(23, 24, 23, 0.14);
 }
 
+.project-icon--stock-agent {
+  box-shadow: none;
+}
+
 .project-meta {
   display: flex;
   justify-content: space-between;
