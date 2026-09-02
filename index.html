@@ -7,7 +7,7 @@
       name="description"
       content="Seton Liu's personal project portfolio: polished apps, research tools, and small systems."
     />
-    <meta name="theme-color" content="#f4f2ec" />
+    <meta name="theme-color" content="#c9d5e7" />
     <meta property="og:title" content="Seton Liu | Personal Projects" />
     <meta
       property="og:description"
@@ -17,13 +17,63 @@
     <title>Seton Liu | Personal Projects</title>
     <link rel="icon" href="assets/favicon.svg?v=3" type="image/svg+xml" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=3" />
-    <link rel="preload" href="styles.css?v=card-spacing-2" as="style" />
-    <link rel="stylesheet" href="styles.css?v=card-spacing-2" />
-    <script src="script.js?v=pdf-pages-1" defer></script>
+    <link rel="preload" href="styles.css?v=browser-tabs-1" as="style" />
+    <link rel="stylesheet" href="styles.css?v=browser-tabs-1" />
+    <script src="script.js?v=browser-tabs-1" defer></script>
   </head>
   <body>
+    <header class="browser-chrome">
+      <div class="browser-tab-strip">
+        <div class="browser-window-controls" aria-hidden="true">
+          <span class="window-control window-control--close"></span>
+          <span class="window-control window-control--minimize"></span>
+          <span class="window-control window-control--maximize"></span>
+        </div>
+        <nav class="browser-tabs" role="tablist" aria-label="Portfolio sections">
+          <button
+            class="browser-tab is-active"
+            id="projects-tab"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="projects"
+            data-browser-tab="projects"
+          >
+            <span class="browser-tab__icon browser-tab__icon--projects" aria-hidden="true"></span>
+            <span>Projects</span>
+          </button>
+          <button
+            class="browser-tab"
+            id="podcasts-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="podcasts"
+            data-browser-tab="podcasts"
+            tabindex="-1"
+          >
+            <span class="browser-tab__icon browser-tab__icon--podcasts" aria-hidden="true"></span>
+            <span>Podcasts</span>
+          </button>
+          <span class="browser-new-tab" aria-hidden="true">+</span>
+        </nav>
+      </div>
+      <div class="browser-toolbar">
+        <div class="browser-address-bar">
+          <span class="browser-address-bar__status" aria-hidden="true"></span>
+          <span data-browser-address>setliu22.github.io/projects</span>
+        </div>
+        <span class="browser-menu" aria-hidden="true">•••</span>
+      </div>
+    </header>
+
     <main id="top">
-      <section class="work-section" id="projects" aria-labelledby="projects-label">
+      <section
+        class="work-section browser-panel"
+        id="projects"
+        role="tabpanel"
+        aria-labelledby="projects-tab"
+      >
         <p class="section-label" id="projects-label">01 | Projects</p>
         <div class="project-grid">
           <article class="project-card accent-steel">
@@ -101,7 +151,13 @@
         </div>
       </section>
 
-      <section class="podcast-section" id="podcasts" aria-labelledby="podcasts-label">
+      <section
+        class="podcast-section browser-panel"
+        id="podcasts"
+        role="tabpanel"
+        aria-labelledby="podcasts-tab"
+        hidden
+      >
         <p class="section-label" id="podcasts-label">02 | Podcasts</p>
         <div class="podcast-grid">
           <article class="podcast-card">
