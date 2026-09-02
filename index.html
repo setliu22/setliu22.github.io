@@ -28,75 +28,43 @@
       <section class="work-section" id="projects" aria-labelledby="projects-label">
         <p class="section-label" id="projects-label">01 | Projects</p>
         <div class="project-grid">
-          <article class="project-card accent-olive">
-            <div class="project-meta">
-              <span>Projects-01</span>
-              <span>Watch</span>
-            </div>
-            <div class="project-title-row">
-              <img
-                class="project-icon"
-                src="assets/project-betterworkouts.png?v=3"
-                alt="BetterWorkouts app icon"
-                width="72"
-                height="72"
-              />
-              <h3>BetterWorkouts</h3>
-            </div>
-            <p>
-              A better workout progression tracker for planning sets, logging
-              lifts, and seeing training progress over time.
-            </p>
-            <button
-              class="action-control card-action"
-              type="button"
-              data-screenshot-target="betterworkouts-screenshots"
-            >
-              View screenshots <span aria-hidden="true">-></span>
-            </button>
-            <ul class="tag-list" aria-label="Technologies">
-              <li>Swift</li>
-              <li>SwiftUI</li>
-              <li>watchOS</li>
-            </ul>
-          </article>
-
           <article class="project-card accent-steel">
             <div class="project-meta">
-              <span>Projects-02</span>
-              <span>Watch</span>
+              <span>Projects-01</span>
+              <span>App</span>
             </div>
             <div class="project-title-row">
               <img
                 class="project-icon"
-                src="assets/project-wristcards.png?v=7"
-                alt="WristCards app icon"
+                src="assets/project-stock-agent.png?v=1"
+                alt="Stock Agent app icon"
                 width="72"
                 height="72"
               />
-              <h3>WristCards</h3>
+              <h3>Stock Agent</h3>
             </div>
             <p>
-              Pick a synced deck on your watch and review flashcards in quick,
-              focused sessions.
+              A local-first research and portfolio companion for human-approved
+              LSEG research, deterministic stock screening, risk review, and
+              macro context.
             </p>
             <button
               class="action-control card-action"
               type="button"
-              data-screenshot-target="wristcards-screenshots"
+              data-screenshot-target="stock-agent-screenshots"
             >
               View screenshots <span aria-hidden="true">-></span>
             </button>
             <ul class="tag-list" aria-label="Technologies">
-              <li>Swift</li>
-              <li>SwiftUI</li>
-              <li>watchOS</li>
+              <li>Python</li>
+              <li>LSEG</li>
+              <li>SQLite</li>
             </ul>
           </article>
 
           <article class="project-card accent-clay project-card--wide-title">
             <div class="project-meta">
-              <span>Projects-03</span>
+              <span>Projects-02</span>
               <span>Research</span>
             </div>
             <div class="project-title-row">
@@ -117,6 +85,37 @@
               class="action-control card-action"
               type="button"
               data-screenshot-target="homoglyph-paper"
+            >
+              Read preprint <span aria-hidden="true">-></span>
+            </button>
+            <ul class="tag-list" aria-label="Technologies">
+              <li>Python</li>
+            </ul>
+          </article>
+
+          <article class="project-card accent-olive">
+            <div class="project-meta">
+              <span>Projects-03</span>
+              <span>Research</span>
+            </div>
+            <div class="project-title-row">
+              <img
+                class="project-icon"
+                src="assets/project-homoglyph.png?v=2"
+                alt="Embedding Models for Fine-Grained Visual Homoglyph Detection app icon"
+                width="72"
+                height="72"
+              />
+              <h3>Embedding Models for Fine-Grained Visual Homoglyph Detection</h3>
+            </div>
+            <p>
+              Comparing visual embedding architectures for detecting lookalike
+              characters and measuring fine-grained glyph similarity.
+            </p>
+            <button
+              class="action-control card-action"
+              type="button"
+              data-screenshot-target="embedding-models-paper"
             >
               Read preprint <span aria-hidden="true">-></span>
             </button>
@@ -199,75 +198,28 @@
 
     <dialog
       class="screenshot-dialog"
-      id="betterworkouts-screenshots"
-      aria-labelledby="betterworkouts-screenshots-title"
+      id="stock-agent-screenshots"
+      aria-labelledby="stock-agent-screenshots-title"
     >
       <div class="screenshot-dialog__panel">
         <div class="screenshot-dialog__header">
           <div>
-            <p class="section-label">Watch Screens</p>
-            <h2 id="betterworkouts-screenshots-title">BetterWorkouts</h2>
+            <p class="section-label">App Screens</p>
+            <h2 id="stock-agent-screenshots-title">Stock Agent</h2>
           </div>
           <button class="action-control action-control--secondary" type="button" data-screenshot-close>
             Close
           </button>
         </div>
-        <div class="screenshot-gallery" aria-label="BetterWorkouts screenshots">
+        <div class="screenshot-gallery" aria-label="Stock Agent screenshots">
           <figure class="screenshot-frame">
             <img
-              src="assets/screenshot-betterworkouts-start.png?v=1"
-              alt="BetterWorkouts watch start screen with Start and Reorder actions"
-              width="416"
-              height="496"
+              src="assets/screenshot-stock-agent-research.png?v=1"
+              alt="Stock Agent Research Lab window with research quick starts and question form"
+              width="2294"
+              height="1490"
             />
-            <figcaption>Start workout</figcaption>
-          </figure>
-          <figure class="screenshot-frame">
-            <img
-              src="assets/screenshot-betterworkouts-active.png?v=1"
-              alt="BetterWorkouts active workout screen with load controls"
-              width="416"
-              height="496"
-            />
-            <figcaption>Adjust workout load</figcaption>
-          </figure>
-        </div>
-      </div>
-    </dialog>
-
-    <dialog
-      class="screenshot-dialog"
-      id="wristcards-screenshots"
-      aria-labelledby="wristcards-screenshots-title"
-    >
-      <div class="screenshot-dialog__panel">
-        <div class="screenshot-dialog__header">
-          <div>
-            <p class="section-label">Watch Screens</p>
-            <h2 id="wristcards-screenshots-title">WristCards</h2>
-          </div>
-          <button class="action-control action-control--secondary" type="button" data-screenshot-close>
-            Close
-          </button>
-        </div>
-        <div class="screenshot-gallery" aria-label="WristCards screenshots">
-          <figure class="screenshot-frame">
-            <img
-              src="assets/screenshot-wristcards-decks.png?v=1"
-              alt="WristCards watch deck list screen"
-              width="416"
-              height="496"
-            />
-            <figcaption>Deck selection</figcaption>
-          </figure>
-          <figure class="screenshot-frame">
-            <img
-              src="assets/screenshot-wristcards-card.png?v=1"
-              alt="WristCards watch flashcard detail screen with reveal controls"
-              width="416"
-              height="496"
-            />
-            <figcaption>Flashcard review</figcaption>
+            <figcaption>Research Lab</figcaption>
           </figure>
         </div>
       </div>
@@ -297,6 +249,38 @@
         <a
           class="action-control paper-dialog__link"
           href="assets/homoglyph-detection-preprint.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          Open PDF in new tab <span aria-hidden="true">-></span>
+        </a>
+      </div>
+    </dialog>
+
+    <dialog
+      class="screenshot-dialog paper-dialog"
+      id="embedding-models-paper"
+      aria-labelledby="embedding-models-paper-title"
+    >
+      <div class="screenshot-dialog__panel paper-dialog__panel">
+        <div class="screenshot-dialog__header">
+          <div>
+            <p class="section-label">Preprint</p>
+            <h2 id="embedding-models-paper-title">Embedding Models for Fine-Grained Visual Homoglyph Detection</h2>
+          </div>
+          <button class="action-control action-control--secondary" type="button" data-screenshot-close>
+            Close
+          </button>
+        </div>
+        <div class="paper-viewer">
+          <iframe
+            src="assets/embedding-models-homoglyph-preprint.pdf#view=FitH"
+            title="Embedding Models for Fine-Grained Visual Homoglyph Detection preprint"
+          ></iframe>
+        </div>
+        <a
+          class="action-control paper-dialog__link"
+          href="assets/embedding-models-homoglyph-preprint.pdf"
           target="_blank"
           rel="noopener"
         >
