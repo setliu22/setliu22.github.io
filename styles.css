@@ -100,7 +100,7 @@ h3 {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .project-card,
@@ -150,7 +150,7 @@ h3 {
   z-index: 2;
 }
 
-.project-card:nth-child(3n)::after,
+.project-card:last-child::after,
 .podcast-card:last-child::after {
   display: none;
 }
