@@ -545,19 +545,6 @@ h3 {
   margin-top: 14px;
 }
 
-.pitch-viewer {
-  padding: 0;
-}
-
-.pitch-viewer__frame {
-  display: block;
-  width: 100%;
-  height: 78vh;
-  min-height: 640px;
-  border: 0;
-  background: #fff;
-}
-
 .investing-grid {
   display: grid;
   width: 100%;
@@ -680,11 +667,6 @@ h3 {
 @media (max-width: 700px) {
   .investing-grid {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .pitch-viewer__frame {
-    height: 64vh;
-    min-height: 0;
   }
 
   .browser-tab-strip {

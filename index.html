@@ -17,9 +17,9 @@
     <title>Seton Liu | Personal Projects</title>
     <link rel="icon" href="assets/favicon.svg?v=3" type="image/svg+xml" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=3" />
-    <link rel="preload" href="styles.css?v=investing-2" as="style" />
-    <link rel="stylesheet" href="styles.css?v=investing-2" />
-    <script src="script.js?v=investing-2" defer></script>
+    <link rel="preload" href="styles.css?v=investing-3" as="style" />
+    <link rel="stylesheet" href="styles.css?v=investing-3" />
+    <script src="script.js?v=investing-3" defer></script>
   </head>
   <body>
     <header class="browser-chrome">
@@ -44,19 +44,6 @@
           </button>
           <button
             class="browser-tab"
-            id="investing-tab"
-            type="button"
-            role="tab"
-            aria-selected="false"
-            aria-controls="investing"
-            data-browser-tab="investing"
-            tabindex="-1"
-          >
-            <span class="browser-tab__icon browser-tab__icon--investing" aria-hidden="true"></span>
-            <span>Investing</span>
-          </button>
-          <button
-            class="browser-tab"
             id="podcasts-tab"
             type="button"
             role="tab"
@@ -67,6 +54,19 @@
           >
             <span class="browser-tab__icon browser-tab__icon--podcasts" aria-hidden="true"></span>
             <span>Podcasts</span>
+          </button>
+          <button
+            class="browser-tab"
+            id="investing-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="investing"
+            data-browser-tab="investing"
+            tabindex="-1"
+          >
+            <span class="browser-tab__icon browser-tab__icon--investing" aria-hidden="true"></span>
+            <span>Investing</span>
           </button>
           <span class="browser-new-tab" aria-hidden="true">+</span>
         </nav>
@@ -165,55 +165,13 @@
       </section>
 
       <section
-        class="investing-section browser-panel"
-        id="investing"
-        role="tabpanel"
-        aria-labelledby="investing-tab"
-        hidden
-      >
-        <p class="section-label" id="investing-label">02 | Investing</p>
-        <div class="investing-grid">
-          <article class="project-card investing-card accent-olive">
-            <div class="project-meta">
-              <span>Investing-01</span>
-              <span class="project-status status-pitch">Stock Pitch</span>
-            </div>
-            <div class="project-title-row">
-              <img class="project-icon" src="assets/spotify.svg" alt="Spotify" width="64" height="64" />
-              <h3>Spotify</h3>
-            </div>
-            <p>
-              Spotify stock pitch using comparable company multiples and
-              financial modeling.
-            </p>
-            <p>
-              My $582.15 target was $40.78 (6.5%) below the $622.93 closing
-              price on November 10, 2025, at the 12-month mark.
-            </p>
-            <button
-              class="action-control card-action"
-              type="button"
-              data-screenshot-target="spotify-pitch"
-              aria-label="Read Spotify stock pitch"
-            >
-              Read stock pitch
-            </button>
-            <ul class="tag-list" aria-label="Skills">
-              <li>Financial modeling</li>
-              <li>Comparable company valuation</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section
         class="podcast-section browser-panel"
         id="podcasts"
         role="tabpanel"
         aria-labelledby="podcasts-tab"
         hidden
       >
-        <p class="section-label" id="podcasts-label">03 | Podcasts</p>
+        <p class="section-label" id="podcasts-label">02 | Podcasts</p>
         <div class="podcast-grid">
           <article class="podcast-card">
             <div class="podcast-meta">
@@ -280,6 +238,48 @@
           </article>
         </div>
       </section>
+      <section
+        class="investing-section browser-panel"
+        id="investing"
+        role="tabpanel"
+        aria-labelledby="investing-tab"
+        hidden
+      >
+        <p class="section-label" id="investing-label">03 | Investing</p>
+        <div class="investing-grid">
+          <article class="project-card investing-card accent-olive">
+            <div class="project-meta">
+              <span>Investing-01</span>
+              <span class="project-status status-pitch">Stock Pitch</span>
+            </div>
+            <div class="project-title-row">
+              <img class="project-icon" src="assets/spotify.svg" alt="Spotify" width="64" height="64" />
+              <h3>Spotify</h3>
+            </div>
+            <p>
+              Spotify stock pitch using comparable company multiples and
+              financial modeling.
+            </p>
+            <p>
+              My $582.15 target was $40.78 (6.5%) below the $622.93 closing
+              price on November 10, 2025, at the 12-month mark.
+            </p>
+            <button
+              class="action-control card-action"
+              type="button"
+              data-screenshot-target="spotify-pitch"
+              aria-label="Read Spotify stock pitch"
+            >
+              Read stock pitch
+            </button>
+            <ul class="tag-list" aria-label="Skills">
+              <li>Financial modeling</li>
+              <li>Comparable company valuation</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
     </main>
 
     <dialog
@@ -297,12 +297,15 @@
             Close
           </button>
         </div>
-        <div class="paper-viewer pitch-viewer">
-          <iframe
-            class="pitch-viewer__frame"
-            src="assets/investing/spotify-stock-pitch.pdf#view=FitH"
-            title="Spotify stock pitch PDF"
-          ></iframe>
+        <div class="paper-viewer">
+          <div
+            class="paper-pages"
+            data-paper-path="assets/investing"
+            data-page-count="1"
+            data-page-width="1400"
+            data-page-height="1811"
+            data-paper-title="Spotify Technology S.A. stock pitch"
+          ></div>
         </div>
         <a
           class="action-control paper-dialog__link"

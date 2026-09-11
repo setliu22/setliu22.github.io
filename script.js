@@ -115,8 +115,8 @@ const loadPaperPages = (dialog) => {
 
     image.src = `${paperPath}/page-${paddedPageNumber}.jpg`;
     image.alt = `${paperTitle}, page ${pageNumber}`;
-    image.width = 1400;
-    image.height = 1980;
+    image.width = Number(container.dataset.pageWidth) || 1400;
+    image.height = Number(container.dataset.pageHeight) || 1980;
     image.decoding = "async";
     image.loading = pageNumber === 1 ? "eager" : "lazy";
     fragment.appendChild(image);
