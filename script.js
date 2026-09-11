@@ -8,6 +8,11 @@ const browserTabs = Array.from(document.querySelectorAll("[data-browser-tab]"));
 const browserPanels = Array.from(document.querySelectorAll(".browser-panel"));
 const browserAddress = document.querySelector("[data-browser-address]");
 const validBrowserTabs = new Set(browserTabs.map((tab) => tab.dataset.browserTab));
+const browserTabLabels = {
+  projects: "Projects",
+  investing: "Investing",
+  podcasts: "Podcasts",
+};
 
 const activateBrowserTab = (targetId, options = {}) => {
   const { updateHistory = false, moveFocus = false } = options;
@@ -35,7 +40,7 @@ const activateBrowserTab = (targetId, options = {}) => {
     browserAddress.textContent = `setliu22.github.io/${targetId}`;
   }
 
-  document.title = `Seton Liu | ${targetId === "projects" ? "Projects" : "Podcasts"}`;
+  document.title = `Seton Liu | ${browserTabLabels[targetId] || "Projects"}`;
 
   if (updateHistory && window.location.hash !== `#${targetId}`) {
     window.history.pushState({ browserTab: targetId }, "", `#${targetId}`);

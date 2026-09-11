@@ -44,6 +44,19 @@
           </button>
           <button
             class="browser-tab"
+            id="investing-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="investing"
+            data-browser-tab="investing"
+            tabindex="-1"
+          >
+            <span class="browser-tab__icon browser-tab__icon--investing" aria-hidden="true"></span>
+            <span>Investing</span>
+          </button>
+          <button
+            class="browser-tab"
             id="podcasts-tab"
             type="button"
             role="tab"
@@ -152,13 +165,55 @@
       </section>
 
       <section
+        class="investing-section browser-panel"
+        id="investing"
+        role="tabpanel"
+        aria-labelledby="investing-tab"
+        hidden
+      >
+        <p class="section-label" id="investing-label">02 | Investing</p>
+        <div class="investing-grid">
+          <article class="project-card investing-card accent-olive">
+            <div class="project-meta">
+              <span>Investing-01</span>
+              <span class="project-status status-pitch">Stock Pitch</span>
+            </div>
+            <div class="project-title-row">
+              <span class="project-icon investment-icon" aria-hidden="true">SPOT</span>
+              <h3>Spotify</h3>
+            </div>
+            <p>
+              Spotify stock pitch using a comparable companies multiple valuation
+              strategy. My $582.15 12-month target price was highly accurate.
+              At the 12-month mark on November 10, 2025, the stock closed at
+              $622.93, putting the target $40.78 low, or 6.5% below the actual
+              price. By year-end, SPOT closed at $580.71 on December 31, 2025,
+              just $1.44 from the target, or 0.25% away.
+            </p>
+            <button
+              class="action-control card-action"
+              type="button"
+              data-screenshot-target="spotify-pitch"
+              aria-label="Read Spotify stock pitch"
+            >
+              Read stock pitch
+            </button>
+            <ul class="tag-list" aria-label="Stock pitch details">
+              <li>Comparable companies multiple</li>
+              <li>BUY</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section
         class="podcast-section browser-panel"
         id="podcasts"
         role="tabpanel"
         aria-labelledby="podcasts-tab"
         hidden
       >
-        <p class="section-label" id="podcasts-label">02 | Podcasts</p>
+        <p class="section-label" id="podcasts-label">03 | Podcasts</p>
         <div class="podcast-grid">
           <article class="podcast-card">
             <div class="podcast-meta">
@@ -226,6 +281,39 @@
         </div>
       </section>
     </main>
+
+    <dialog
+      class="screenshot-dialog paper-dialog"
+      id="spotify-pitch"
+      aria-labelledby="spotify-pitch-title"
+    >
+      <div class="screenshot-dialog__panel paper-dialog__panel">
+        <div class="screenshot-dialog__header">
+          <div>
+            <p class="section-label">Stock Pitch</p>
+            <h2 id="spotify-pitch-title">Spotify Technology S.A.</h2>
+          </div>
+          <button class="action-control action-control--secondary" type="button" data-screenshot-close>
+            Close
+          </button>
+        </div>
+        <div class="paper-viewer pitch-viewer">
+          <iframe
+            class="pitch-viewer__frame"
+            src="assets/investing/spotify-stock-pitch.pdf#view=FitH"
+            title="Spotify stock pitch PDF"
+          ></iframe>
+        </div>
+        <a
+          class="action-control paper-dialog__link"
+          href="assets/investing/spotify-stock-pitch.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          Open PDF in new tab
+        </a>
+      </div>
+    </dialog>
 
     <dialog
       class="screenshot-dialog paper-dialog"
