@@ -360,17 +360,6 @@ h3 {
   box-shadow: none;
 }
 
-.investment-icon {
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, #1db954, #1ed760 48%, var(--olive));
-  color: #fff;
-  font-size: 0.72rem;
-  font-weight: 750;
-  letter-spacing: 0.08em;
-  text-shadow: 0 1px 2px rgba(23, 24, 23, 0.2);
-}
-
 .project-meta {
   display: flex;
   min-height: 32px;
@@ -574,13 +563,12 @@ h3 {
   width: 100%;
   min-height: 0;
   flex: 1;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow-y: auto;
 }
 
 .investing-card {
-  background:
-    linear-gradient(180deg, rgba(255, 254, 250, 0.96), rgba(255, 254, 250, 0.7)),
-    var(--surface);
+  min-height: min-content;
 }
 
 .podcast-grid {
@@ -690,6 +678,15 @@ h3 {
 }
 
 @media (max-width: 700px) {
+  .investing-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pitch-viewer__frame {
+    height: 64vh;
+    min-height: 0;
+  }
+
   .browser-tab-strip {
     gap: 0;
     padding: 6px 8px 0;
