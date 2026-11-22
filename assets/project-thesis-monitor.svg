@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img" aria-labelledby="title">
+  <title id="title">Thesis Monitor</title>
+  <rect x="1" y="1" width="70" height="70" rx="14" fill="#efe8dc" stroke="#cdbca9"/>
+  <path d="M20 13h23l10 10v36H20V13Z" fill="#fffefa" stroke="#8b5d4b" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M43 13v11h10M27 33h19M27 40h19" fill="none" stroke="#8b5d4b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M28 52v-5m8 5V42m8 10V37" fill="none" stroke="#4f6247" stroke-width="4" stroke-linecap="round"/>
+</svg>
